@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "curzoangular": {
+    "MiniCalculadoraApp": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/curzoangular",
+            "outputPath": "dist/mini-calculadora-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -25,9 +25,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.min.js"]
           },
           "configurations": {
             "production": {
@@ -60,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "curzoangular:build:production"
+              "browserTarget": "MiniCalculadoraApp:build:production"
             },
             "development": {
-              "browserTarget": "curzoangular:build:development"
+              "browserTarget": "MiniCalculadoraApp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "curzoangular:build"
+            "browserTarget": "MiniCalculadoraApp:build"
           }
         },
         "test": {
@@ -96,6 +97,6 @@
     }
   },
   "cli": {
-    "analytics": "99be9bdb-b858-46d1-9fb7-33bc1b4eea98"
+    "analytics": "48a59b58-d4b1-41f7-9485-71c33593c888"
   }
 }
